@@ -1,7 +1,13 @@
 ---
-title: "Portfolio item number 1"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/500x300.png'>"
+title: "Advanced Image Segmentation Algorithm"
+excerpt: "A novel deep learning algorithm for advanced image segmentation<br/><img src='/images/500x300.png'>"
 collection: portfolio
 ---
 
-This is an item in your portfolio. It can be have images or nice text. If you name the file .md, it will be parsed as markdown. If you name the file .html, it will be parsed as HTML. 
+This is a novel deep learning algorithm for advanced image segmentation that I developed during my PhD research. The algorithm achieves state-of-the-art performance on various benchmark datasets.
+
+The project includes:
+- A novel neural network architecture for image segmentation
+- Training code and pre-trained models
+- Evaluation scripts and benchmark results
+- Documentation and usage examples
