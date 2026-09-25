@@ -1,14 +1,14 @@
 ---
-title: "Teaching experience 2"
+title: "Deep Learning Workshop"
 collection: teaching
 type: "Workshop"
-permalink: /teaching/2015-spring-teaching-1
-venue: "University 1, Department"
-date: 2015-01-01
-location: "City, Country"
+permalink: /teaching/2015-spring-teaching-2
+venue: "Tsinghua University, Department of Computer Science and Technology"
+date: 2022-07-15
+location: "Beijing, China"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
+This is the deep learning workshop I teach at Tsinghua University. The workshop covers advanced topics in deep learning, including convolutional neural networks, recurrent neural networks, and generative models.
 
 Heading 1
 ======
