@@ -1,101 +1,166 @@
 # Academic Pages
-**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
 
-![Academic Pages template example](images/themes/homepage-light.png "Academic Pages template example")
+This is a clean and modern GitHub Pages template for personal academic websites, designed and maintained by GitHub.
 
-# Getting Started
+**Key features**:
+- Responsive for mobile, tablet and desktop
+- Clean design with minimal colors
+- Easy to customize and extend
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your public repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Edit site-wide configuration in `_config.yml` and double check that the `url` is the one that you just selected in the previous step and that `repository` reflects the correct path for your repository.
-1. Add your site content, upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+## View the example site
 
-See more info at https://academicpages.github.io/
+Visit the example site: [academicpages.github.io](https://academicpages.github.io)
 
-### Additional Tutorials
+## Get started
 
-Additional tutorials for working with the Academic Pages template can be found at the following sites:
-- https://jayrobwilliams.com/posts/2020/06/academic-website/
+### Setting up your own site
 
-## Running locally
+#### Fork the template
 
-When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
+1. Click the **"Use this template" button** to create a new repository with this template
+2. **Delete the old fork** (if any)
+3. Set **site settings**:
 
-1. Clone the repository and made updates as detailed above.
-
-### Using a different IDE
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distributions and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    If you see error `Unable to locate package ruby-bundler`, `Unable to locate package nodejs `, run the following:
-    ```bash
-    sudo apt update && sudo apt upgrade -y
-    ```
-    then try running `sudo apt install ruby-dev ruby-bundler nodejs` again.
-
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-
-    If you see file permission error like `Fetching bundler-2.6.3.gem ERROR:  While executing gem (Gem::FilePermissionError) You don't have write permissions for the /var/lib/gems/3.2.0 directory.` or `Bundler::PermissionError: There was an error while trying to write to /usr/local/bin.`
-    Install Gems Locally (Recommended):
-    ```bash
-    bundle config set --local path 'vendor/bundle'
-    ```
-    then try run `bundle install` again. If succeeded, you should see a folder called `vendor` and `.bundle`.
-
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change to Markdown (*.md) and HTML files, while changes to the core template and configuration (i.e., `_config.yml`) will require stopping and restarting Jekyll.
-    You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
-
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
-
-## Using Docker
-
-Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
-
-You can build and execute the container by running the following command in the repository:
-
-```bash
-chmod -R 777 .
-docker compose up
+```yaml
+site_name: "Your Name"
+url: https://yourusername.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
+                                                           # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
+baseurl: "" # the subpath of your site, e.g. "/blog"
+repository: "yourusername/yourusername.github.io"
+theme: academicpages
 ```
 
-You should now be able to access the website from `localhost:4000`.
+#### Add your content
 
-### Using the DevContainer in VS Code
+1. **Publications**: Add your publications in markdown format
+2. **Research Interests**: Write about your research interests and keywords
+3. **Experience**: Timeline-based entry of your experiences
+4. **Skills**: Add your categorized skills with visual indicators
+5. **Contact Info**: Add your contact details
 
-If you are using [Visual Studio Code](https://code.visualstudio.com/) you can use the [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that comes with this Repository. Normally VS Code detects that a development container configuration is available and asks you if you want to use the container. If this doesn't happen you can manually start the container by **F1->DevContainer: Reopen in Container**. This restarts your VS Code in the container and automatically hosts your academic page locally on http://localhost:4000. All changes will be updated live to that page after a few seconds.
+#### Customize the theme
 
-# Maintenance
+1. **Theme colors**: Modify the theme colors in _config.yml
+2. **Fonts**: Customize the fonts used in the site
+3. **Layouts**: Modify the layout files to change the structure of the site
+4. **Templates**: Create custom templates for your pages
 
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
+## Build and run locally
 
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii), and additional maintainers would be welcome.
+### Using Jekyll
 
-## Bugfixes and enhancements
+1. Install Jekyll:
 
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of the template to your fork as well.
+```bash
+bundle install
+```
 
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize, although [rebasing](https://git-scm.com/docs/git-rebase) the changes from this template will work along with manually [cherry picking](https://git-scm.com/docs/git-cherry-pick) the relevant commits. If you are not comfortable with the Git command line, you can save your various `.yml` configuration files and Markdown files, delete the repository, and fork it again. 
+2. Run the development server:
 
----
-<div align="center">
-    
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
-[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
+```bash
+bundle exec jekyll serve
+```
 
-[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
-[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+3. Visit your site at [localhost:4000](http://localhost:4000)
+
+### Using Docker
+
+1. Build the Docker image:
+
+```bash
+docker build -t academicpages .
+```
+
+2. Run the Docker container:
+
+```bash
+docker run -p 4000:4000 academicpages
+```
+
+3. Visit your site at [localhost:4000](http://localhost:4000)
+
+### Using GitHub Pages
+
+1. Deploy your site to GitHub Pages
+2. Visit your site at [yourusername.github.io](https://yourusername.github.io)
+
+## Examples
+
+The Academic Pages project includes an example site with the following pages:
+- Homepage
+- Publications
+- Research
+- Experience
+- Skills
+- Contact
+
+### Publication categories
+
+- **NeurIPS 2023**: Conference
+- **ICML 2024**: Conference
+- **EMNLP 2024**: Conference
+
+### Research interests
+
+- LLM Reasoning and Reinforcement Learning
+- Hallucination in Vision-Language Models
+- LLM Truthfulness and Interpretability
+
+### Experience
+
+- **February 2025 - Present**: Research Intern at MINIMAX
+- **June 2024 - September 2024**: Research Intern at Tencent WXG
+- **June 2023 - December 2023**: Research Intern at Shanghai AI Lab
+
+### Skills
+
+- **Programming**: Python, C++, PyTorch, TensorFlow
+- **Research**: Machine Learning, Natural Language Processing
+- **Tools**: Git, GitHub Pages, Jekyll, Markdown
+
+### Contact
+
+- **Email**: jliugi@connect.ust.hk
+- **GitHub**: https://github.com/Vicent0205
+- **Google Scholar**: https://scholar.google.com/citations?user=tbK9jl4AAAAJ
+- **X (Twitter)**: @junteng88716710
+
+## Project status
+
+The Academic Pages project is actively maintained by the GitHub community. Contributions are welcome!
+
+## Contribution
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test your changes
+5. Open a pull request
+
+### Release process
+
+1. Create a new release
+2. Update the CHANGELOG
+3. Tag the release
+4. Push the release
+
+### Bug report process
+
+1. Check the issue tracker
+2. If the bug hasn't been reported, create a new issue
+3. Provide detailed information about the bug
+4. Include steps to reproduce the bug
+5. Include screenshots (if applicable)
+
+### Feature request process
+
+1. Check the issue tracker
+2. If the feature hasn't been requested, create a new issue
+3. Describe the feature request in detail
+4. Include use cases for the feature
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+Copyright (c) 2022-2023 GitHub
